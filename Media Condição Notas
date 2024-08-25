@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{	
+float n1=0;
+float n2=0;
+float m=0;
+printf("nota 1: ");
+cin>>(n1);
+printf("nota 2: ");
+cin>>(n2);
+	m=(n1+n2)/2;
+	cout<<("sua media ==> ");
+	cout<<(m);
+	if(m>=6)
+	{;
+		cout<<("aprovado");
+	}
+	else
+{
+	cout<<("reprovado");
+};
+
+}
