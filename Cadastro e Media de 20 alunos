@@ -1,0 +1,49 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main() {
+    int NUM_ALUNOS = 20;
+    int NUM_NOTAS = 3;
+    int TAM_NOME = 10;
+
+    // Vetor para armazenar os nomes
+    vector<string> nomes(NUM_ALUNOS);
+
+    // Vetor para armazenar as notas
+    vector<vector<float>> notas(NUM_ALUNOS, vector<float>(NUM_NOTAS));
+
+    // Cadastro dos alunos e suas notas
+    for (int i = 0; i < NUM_ALUNOS; ++i) {
+        cout << "Digite o nome do aluno " << i + 1 << " (até 10 caracteres): ";
+        cin.get(); // Limpa o buffer do teclado
+        getline(cin, nomes[i]);
+        nomes[i].resize(TAM_NOME);
+
+        cout << "Digite as 3 notas do aluno " << i + 1 << ": ";
+        for (int j = 0; j < NUM_NOTAS; ++j) {
+            cin >> notas[i][j];
+        }
+    }
+
+    // Cálculo e exibição das médias
+    float soma_turma = 0.0;
+    for (int i = 0; i < NUM_ALUNOS; ++i) {
+        float soma_aluno = 0.0;
+        for (int j = 0; j < NUM_NOTAS; ++j) {
+            soma_aluno += notas[i][j];
+        }
+        float media_aluno = soma_aluno / NUM_NOTAS;
+        soma_turma += media_aluno; // Acumula a média do aluno na soma da turma
+
+        cout << "Aluno: " << nomes[i] << " | Média: " << media_aluno << endl;
+    }
+
+    // Cálculo da média da turma
+    float media_turma = soma_turma / NUM_ALUNOS;
+    cout << "A média da turma é: " << media_turma << endl;
+
+    return 0;
+}
