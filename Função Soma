@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int somar(int x, int y){
+	
+	int soma;
+	soma = x+y;
+	return soma;
+}
+
+int main(){
+		
+	int a=50, b=50;
+	int s;
+	s = somar(a,b);
+	cout<< "Soma: " << s << "\n";
+	
+	return 0;
+}
