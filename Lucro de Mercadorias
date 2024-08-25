@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int codigo;
+    float preco_compra, preco_venda;
+    int menor_10 = 0, entre_10_e_20 = 0, maior_20 = 0;
+    float total_compra = 0, total_venda = 0, lucro_total = 0;
+
+    cout << "Digite o codigo da mercadoria, preco de compra e preco de venda (ou -1 para terminar):\n";
+    cin >> codigo;
+
+    while (codigo != -1) {
+        cin >> preco_compra >> preco_venda;
+
+        float lucro = preco_venda - preco_compra;
+        if (lucro < preco_compra * 0.1)
+            menor_10++;
+        else if (lucro >= preco_compra * 0.1 && lucro <= preco_compra * 0.2)
+            entre_10_e_20++;
+        else
+            maior_20++;
+
+        total_compra += preco_compra;
+        total_venda += preco_venda;
+        lucro_total += lucro;
+
+        cout << "Digite o codigo da proxima mercadoria (ou -1 para terminar):\n";
+        cin >> codigo;
+    }
+
+    cout << "Mercadorias com lucro menor que 10%: " << menor_10 << "\n";
+    cout << "Mercadorias com lucro entre 10% e 20%: " << entre_10_e_20 << "\n";
+    cout << "Mercadorias com lucro maior que 20%: " << maior_20 << "\n";
+    cout << "Valor total de compra: " << total_compra << "\n";
+    cout << "Valor total de venda: " << total_venda << "\n";
+    cout << "Lucro total: " << lucro_total << "\n";
+
+    return 0;
+}
