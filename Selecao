@@ -1,0 +1,47 @@
+#include <iostream>
+#include <cstdlib>
+ 
+using namespace std;
+ 
+int main()
+{
+	int op;
+	cout<<("informe sua opcao entre 1,2,3,4 ou 0: ");
+	cin>>(op);
+	if(op==1)
+	{
+		cout<<("cadastra");
+	}
+	else
+	{
+		if(op==2)
+		{
+			cout<<("consulta");
+		}
+		else
+		{
+			if (op==3)
+			{
+				cout<<("alteracao");
+			}
+			else
+			{
+				if (op==4)
+				{
+					cout<<("exclusao");
+				}
+				else
+				{
+					if (op==0)
+					{
+						cout<<("fim");
+					}
+					else
+					{
+						cout<<("por favor escolha 1,2,3,4 ou 0");
+					};
+				};
+			};
+		};
+	};
+}
