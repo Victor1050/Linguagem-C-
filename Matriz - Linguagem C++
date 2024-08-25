@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int main()
+{
+	
+	int vB[3][3]; /* matriz com 3 linhas e 3 colunas . lembra que primeiro coluna depois linha*/
+	
+	/* início exemplo de matriz*/
+	
+	for(int L=0;L<3;L++)
+	{
+		for(int C=0;C<3;C++)
+		{
+		   cout<<("\n informe ano: ");
+		   cin>>(vB[C][L]);	
+		}
+	}
+	
+    for(int L=0;L<3;L++)
+	{
+		for(int C=0;C<3;C++)
+		{
+		   cout<<("\n ano informado: ");
+		   cout<<(vB[C][L]);
+	}
+}
+			
+	/* fim do exemplo de matriz*/
+
+};
