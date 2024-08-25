@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+ 
+int main()
+{
+	int c=0;
+	cout<<("informe opcao de 1 a 4 ou 0: ");
+	cin>>(c);
+switch (c)
+      {
+         case 1:
+            cout<<("CADASTRAR");
+            break;
+         case 2:
+            cout<<("CONSULTAR");
+            break;
+         case 3:
+            cout<<("ALTERAR");
+            break;
+         case 4:
+            cout<<("EXCLUIR");
+            break;
+         case 0:
+            cout<<("FIM DO PROGRAMA");
+            break;
+ 
+         default:
+            cout<<("opcao invalida");
+      };
+}
