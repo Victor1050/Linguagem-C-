@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Loop para ler os dados de 5 clientes
+    for (int i = 0; i < 5; ++i) {
+        // Declarando as variáveis para armazenar os dados do cliente
+        float salario, financiamento;
+
+        // Lendo os dados do cliente
+        cout << "Digite o salario do cliente " << i+1 << ": R$ ";
+        cin >> salario;
+        cout << "Digite o valor do financiamento pretendido pelo cliente " << i+1 << ": R$ ";
+        cin >> financiamento;
+
+        // Verificando se o financiamento é menor ou igual a 5 vezes o salário
+        if (financiamento <= 5 * salario) {
+            cout << "Financiamento Concedido" << endl;
+        } else {
+            cout << "Financiamento Negado" << endl;
+        }
+
+        // Imprimindo a frase de agradecimento
+        cout << "Obrigado por nos consultar." << endl;
+    }
+
+    return 0;
+}
